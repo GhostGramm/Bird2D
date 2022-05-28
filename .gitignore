@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Assets/2D Match Three Icon Pack V.1
+/Assets/2DBirds_Pack3
+/Library
+/ProjectSettings
+/Temp
+/UserSettings
