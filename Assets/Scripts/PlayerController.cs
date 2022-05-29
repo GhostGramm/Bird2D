@@ -28,4 +28,5 @@ public class PlayerController : MonoBehaviour
         float clampY = Mathf.Clamp(transform.position.y, -border, border);
         transform.position = new Vector3(transform.position.x, clampY, transform.position.z);
     }
+
 }

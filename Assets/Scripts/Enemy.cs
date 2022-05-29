@@ -20,4 +20,15 @@ public class Enemy : MonoBehaviour
     {
         transform.position += Vector3.left * speed * Time.deltaTime;
     }
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+        if (collider.tag == "Boundary")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
