@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public int speed;
-    public bool canMove = false;
+    [SerializeField] private int speed;
+    [SerializeField] private bool canMove = false;
+    [SerializeField] float border;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,10 @@ public class PlayerController : MonoBehaviour
 
     public void Move()
     {
-        var InputY = Input.GetAxis("Vertical");
+        float InputY = Input.GetAxis("Vertical");
         transform.position += Vector3.up * InputY * speed * Time.deltaTime;
+
+        float clampY = Mathf.Clamp(transform.position.y, -border, border);
+        transform.position = new Vector3(transform.position.x, clampY, transform.position.z);
     }
 }
