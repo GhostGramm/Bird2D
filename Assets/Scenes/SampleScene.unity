@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxY: 4.5
+  spawnInterval: 2
   Birds:
   - {fileID: 4883987979722921453, guid: 60124812755975f4489d2c5e04b3c83b, type: 3}
   - {fileID: 8600729126703589747, guid: f91dc75b9c0a0c349a7ddb1c084ac5fd, type: 3}
