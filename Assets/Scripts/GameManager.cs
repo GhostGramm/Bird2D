@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
         while (gameState == GameState.Playing)
         {
             score++;
+            UiManager.instance.DisplayScoreVisuals(score);
             print(score);
             yield return new WaitForSeconds(1f);
         }
